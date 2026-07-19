@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Nike Shoes",
+      "price": 2999,
+      "rating": 4.5
+    },
+    {
+      "id": 2,
+      "name": "Puma Shoes",
+      "price": 2499,
+      "rating": 4.2
+    },
+    {
+      "id": 3,
+      "name": "Adidas Shoes",
+      "price": 3499,
+      "rating": 4.8
+    }
+  ]
+}
