@@ -1,6 +1,8 @@
+import Input from "../../common/Input/Input"
+
 const SearchBar = () => {
     return (
-        <input type="text" placeholder="search products..." />
+        <Input  placeholder="search products" />
     )
 }
 
