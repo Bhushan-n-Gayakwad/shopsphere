@@ -1,5 +1,6 @@
 import { Outlet } from "react-router";
 import Header from "../components/layout/Header/Header";
+import Footer from "../components/layout/Footer";
 
 
 const MainLayout = () => {
@@ -10,9 +11,9 @@ const MainLayout = () => {
             {/* Outlet is where child pages will render. */}
             <Outlet/>  
 
-            <h2>Footer</h2>
+            <Footer/>
         </>
     )
 }
 
-export default MainLayout
+export default MainLayout   
