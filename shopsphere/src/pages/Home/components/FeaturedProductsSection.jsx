@@ -38,6 +38,7 @@ const FeaturedProductsSection = () => {
     
       products.map((product) => 
       <ProductCard 
+            id={product.id}
             key={product.id}            
             name={product.name}
             price={product.price} 

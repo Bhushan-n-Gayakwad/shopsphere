@@ -9,10 +9,6 @@ const ProductList = ({searchTerm}) => {
     const [error, setError] = useState(null)
     const [loading, setLoading] = useState(true)
 
-    const filterProducts = products.filter((product)=> 
-        product.name.toLowerCase().includes(searchTerm.toLowerCase()))
-
-
     const fetchProducts = async () => {
         setLoading(true)
         try{
@@ -44,9 +40,14 @@ const ProductList = ({searchTerm}) => {
 
     console.log("searchTerm inside product list ", searchTerm)
 
+    const filterProducts = products.filter((product)=> 
+        product.name.toLowerCase().includes(searchTerm.toLowerCase()))
+
+
     return (
         filterProducts.map((product)=>(
-            <ProductCard key={product.id}            
+            <ProductCard key={product.id}       
+            id={product.id}     
             name={product.name}
             price={product.price} 
             rating={product.rating} />

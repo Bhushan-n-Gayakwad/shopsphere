@@ -1,14 +1,17 @@
 import Button from "../common/Button"
+import { Link } from "react-router"
 
-const ProductCard = ({name, price, rating}) => {
+const ProductCard = ({ id, name, price, rating }) => {
     return (
-        <div>
-            <h1>Product Image</h1>
-            <h2>{name}</h2>
-            <h2>₹ {price}</h2>
-            <h2>⭐ {rating}</h2>
-            <Button text="Add to Cart" />
-        </div>
+        <Link to={`/productS/${id}`} >
+            <div>
+                <h1>Product Image</h1>
+                <h2>{name}</h2>
+                <h2>₹ {price}</h2>
+                <h2>⭐ {rating}</h2>
+                <Button text="Add to Cart" />
+            </div>
+        </Link>
     )
 }
 
