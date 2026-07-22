@@ -1,8 +1,14 @@
 import Input from "../../common/Input/Input"
 
-const SearchBar = () => {
+const SearchBar = ({value, onChange}) => {
     return (
-        <Input  placeholder="search products" />
+        // What is the current search text?
+        // What should happen when the user types?
+        <Input  
+            placeholder="search products"
+            value={value}
+            onChange={onChange}
+        />
     )
 }
 

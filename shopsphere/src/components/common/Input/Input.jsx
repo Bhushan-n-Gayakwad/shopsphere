@@ -1,5 +1,15 @@
-const Input = ({type="text", placeholder}) => {
-    return <input type={type} placeholder={placeholder} />
+const Input = ({
+    type="text", 
+    placeholder,
+    value, 
+    onChange
+}) => {
+    return <input 
+                type={type}
+                placeholder={placeholder} 
+                value={value}
+                onChange={onChange}
+            />
 }
 
 export default Input

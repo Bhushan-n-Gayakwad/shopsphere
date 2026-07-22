@@ -35,7 +35,7 @@ const FeaturedProductsSection = () => {
   }
 
   return (
-
+    
       products.map((product) => 
       <ProductCard 
             key={product.id}            
