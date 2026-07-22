@@ -1,31 +1,12 @@
 import { useEffect, useState } from "react";
 import { getProducts } from "../../../services/productService";
 import ProductCard from "../../../components/product/ProductCard";
+import useProducts from "../../../hooks/useProducts";
 
 
 const ProductList = ({searchTerm}) => {
 
-    const [products, setProducts] = useState([])
-    const [error, setError] = useState(null)
-    const [loading, setLoading] = useState(true)
-
-    const fetchProducts = async () => {
-        setLoading(true)
-        try{
-            const data = await getProducts()
-            setProducts(data)   
-            setLoading(false)
-        }catch(error){
-            console.log(error)
-            setError("error: ", error)
-            setLoading(false)
-        }
-    }
-
-
-    useEffect(() => {
-        fetchProducts();
-    }, [])
+    const { products, loading, error } = useProducts();
 
 
     if (error) {
